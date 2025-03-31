@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import "./Home.css"
 import { useEffect,useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -28,7 +28,7 @@ const Home = () => {
        showStatus={false}>
         {
             popularmovies.map(movie=>(
-                <Link style={{testDecoration:"none",color:'white'}} to={`/movie/${movie.id}`}>
+                <Link key={movie.id} style={{testDecoration:"none",color:'white'}} to={`/movie/${movie.id}`}>
                 <div className="posterImage">
                     <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt="error"/>
                 </div>

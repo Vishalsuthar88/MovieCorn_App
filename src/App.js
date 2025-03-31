@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route ,Routes} from 'react-router-dom';
 import Header from './components/movie_header/Header';
 import Home from './Pages/home/Home';
 import MovieList from './components/movielist/MovieList';
+import Movie from './Pages/moviedetail/movie';
 // import Movie from './Pages/movieDetail/Movie';
 
 const App=()=>
@@ -30,7 +31,7 @@ const App=()=>
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path='movies/:type' element={<MovieList />}></Route>
-        <Route path='/*' element={<h1>Stay tuned !</h1>}></Route>
+        <Route path='/movie/:id' element={<Movie/>}></Route>
       </Routes>
     </Router>
     </div>
